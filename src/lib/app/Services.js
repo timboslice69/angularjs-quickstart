@@ -7,8 +7,8 @@ angular
 
 	.factory(
 		'DeviceSvc', [
-			'$rootScope', '$resource', 'APP_CONFIG',
-			function($rootScope, $resource, APP_CONFIG) {
+			'$rootScope', '$resource', 'APP_CONFIG', '$log',
+			function($rootScope, $resource, APP_CONFIG, $log) {
 				var service = {
 						_name: 'DeviceSvc',
 						apiDefinition: {
@@ -53,7 +53,7 @@ angular
 							}
 						}
 					},
-					log = $h.namedLog(service._name, service);
+					log = $log(service._name, service);
 
 				/**
 				 * Initialise Service
