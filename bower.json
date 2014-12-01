@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-quickstart",
+  "version": "0.1.0",
+  "homepage": "https://github.com/timboslice69/angularjs-quickstart",
+  "description": "Quick start AngularJs project",
+  "keywords": [
+    "angularjs"
+  ],
+  "authors": [
+    "Timothy Scott"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.4",
+    "angular-route": "~1.3.4",
+    "angular-sanitize": "~1.3.4",
+    "angular-resource": "~1.3.4"
+  }
+}

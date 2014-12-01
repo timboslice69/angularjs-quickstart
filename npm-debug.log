@@ -1,0 +1,169 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'karma-chrome-launcher',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json angularjs-quickstart@1.0.0 No description
+5 warn package.json angularjs-quickstart@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'karma-chrome-launcher', null ]
+8 verbose cache add name=undefined spec="karma-chrome-launcher" args=["karma-chrome-launcher",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'karma-chrome-launcher',
+9 verbose parsed url   path: 'karma-chrome-launcher',
+9 verbose parsed url   href: 'karma-chrome-launcher' }
+10 silly lockFile 4f6bc915-karma-chrome-launcher karma-chrome-launcher
+11 verbose lock karma-chrome-launcher /Users/timothy/.npm/4f6bc915-karma-chrome-launcher.lock
+12 silly lockFile 4f6bc915-karma-chrome-launcher karma-chrome-launcher
+13 silly lockFile 4f6bc915-karma-chrome-launcher karma-chrome-launcher
+14 verbose addNamed [ 'karma-chrome-launcher', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile cd66acf6-karma-chrome-launcher karma-chrome-launcher@
+17 verbose lock karma-chrome-launcher@ /Users/timothy/.npm/cd66acf6-karma-chrome-launcher.lock
+18 silly addNameRange { name: 'karma-chrome-launcher', range: '*', hasData: false }
+19 verbose request where is /karma-chrome-launcher
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id bbbe5874df9609cd
+22 verbose url raw /karma-chrome-launcher
+23 verbose url resolving [ 'https://registry.npmjs.org/', './karma-chrome-launcher' ]
+24 verbose url resolved https://registry.npmjs.org/karma-chrome-launcher
+25 verbose request where is https://registry.npmjs.org/karma-chrome-launcher
+26 info trying registry request attempt 1 at 17:03:32
+27 verbose etag "3JE0NHD9CKD2YUMUXT6Y2BEQB"
+28 http GET https://registry.npmjs.org/karma-chrome-launcher
+29 http 304 https://registry.npmjs.org/karma-chrome-launcher
+30 silly registry.get cb [ 304,
+30 silly registry.get   { date: 'Fri, 28 Nov 2014 16:03:32 GMT',
+30 silly registry.get     server: 'Apache',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     'last-modified': 'Fri, 28 Nov 2014 16:03:32 GMT',
+30 silly registry.get     'cache-control': 'max-age=60',
+30 silly registry.get     etag: '"3JE0NHD9CKD2YUMUXT6Y2BEQB"',
+30 silly registry.get     age: '21',
+30 silly registry.get     'x-served-by': 'cache-ams4120-AMS',
+30 silly registry.get     'x-cache': 'HIT',
+30 silly registry.get     'x-cache-hits': '1',
+30 silly registry.get     'x-timer': 'S1417190612.827167,VS0,VE0',
+30 silly registry.get     vary: 'Accept',
+30 silly registry.get     'content-length': '0',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 verbose etag https://registry.npmjs.org/karma-chrome-launcher from cache
+32 silly addNameRange number 2 { name: 'karma-chrome-launcher', range: '*', hasData: true }
+33 silly addNameRange versions [ 'karma-chrome-launcher',
+33 silly addNameRange   [ '0.0.1',
+33 silly addNameRange     '0.0.2',
+33 silly addNameRange     '0.1.0',
+33 silly addNameRange     '0.1.1',
+33 silly addNameRange     '0.1.2',
+33 silly addNameRange     '0.1.3',
+33 silly addNameRange     '0.1.4',
+33 silly addNameRange     '0.1.5' ] ]
+34 verbose addNamed [ 'karma-chrome-launcher', '0.1.5' ]
+35 verbose addNamed [ '0.1.5', '0.1.5' ]
+36 silly lockFile 8243f81a-karma-chrome-launcher-0-1-5 karma-chrome-launcher@0.1.5
+37 verbose lock karma-chrome-launcher@0.1.5 /Users/timothy/.npm/8243f81a-karma-chrome-launcher-0-1-5.lock
+38 silly lockFile 8243f81a-karma-chrome-launcher-0-1-5 karma-chrome-launcher@0.1.5
+39 silly lockFile 8243f81a-karma-chrome-launcher-0-1-5 karma-chrome-launcher@0.1.5
+40 silly lockFile cd66acf6-karma-chrome-launcher karma-chrome-launcher@
+41 silly lockFile cd66acf6-karma-chrome-launcher karma-chrome-launcher@
+42 silly resolved [ { name: 'karma-chrome-launcher',
+42 silly resolved     version: '0.1.5',
+42 silly resolved     description: 'A Karma plugin. Launcher for Chrome and Chrome Canary.',
+42 silly resolved     main: 'index.js',
+42 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+42 silly resolved     repository:
+42 silly resolved      { type: 'git',
+42 silly resolved        url: 'git://github.com/karma-runner/karma-chrome-launcher.git' },
+42 silly resolved     keywords: [ 'karma-plugin', 'karma-launcher', 'chrome' ],
+42 silly resolved     author: { name: 'Vojta Jina', email: 'vojta.jina@gmail.com' },
+42 silly resolved     dependencies: {},
+42 silly resolved     peerDependencies: { karma: '>=0.9.3' },
+42 silly resolved     license: 'MIT',
+42 silly resolved     devDependencies:
+42 silly resolved      { grunt: '~0.4.1',
+42 silly resolved        'grunt-npm': '~0.0.2',
+42 silly resolved        'grunt-bump': '~0.0.6',
+42 silly resolved        'grunt-auto-release': '~0.0.2' },
+42 silly resolved     contributors:
+42 silly resolved      [ [Object],
+42 silly resolved        [Object],
+42 silly resolved        [Object],
+42 silly resolved        [Object],
+42 silly resolved        [Object],
+42 silly resolved        [Object],
+42 silly resolved        [Object] ],
+42 silly resolved     bugs: { url: 'https://github.com/karma-runner/karma-chrome-launcher/issues' },
+42 silly resolved     homepage: 'https://github.com/karma-runner/karma-chrome-launcher',
+42 silly resolved     _id: 'karma-chrome-launcher@0.1.5',
+42 silly resolved     dist:
+42 silly resolved      { shasum: '70e95dca5c4d7a15884850daa3ab60d648dbfe8b',
+42 silly resolved        tarball: 'http://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.1.5.tgz' },
+42 silly resolved     _from: 'karma-chrome-launcher@',
+42 silly resolved     _npmVersion: '1.4.4',
+42 silly resolved     _npmUser: { name: 'vojtajina', email: 'vojta.jina@gmail.com' },
+42 silly resolved     maintainers: [ [Object] ],
+42 silly resolved     directories: {},
+42 silly resolved     _shasum: '70e95dca5c4d7a15884850daa3ab60d648dbfe8b',
+42 silly resolved     _resolved: 'https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.1.5.tgz',
+42 silly resolved     readme: 'ERROR: No README data found!' } ]
+43 info install karma-chrome-launcher@0.1.5 into /Users/timothy/Projects/angularjs-quickstart
+44 info installOne karma-chrome-launcher@0.1.5
+45 verbose node_modules/karma-chrome-launcher unbuild
+46 verbose tar unpack /Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz
+47 silly lockFile 4fb6770b-de-modules-karma-chrome-launcher tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
+48 verbose lock tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher /Users/timothy/.npm/4fb6770b-de-modules-karma-chrome-launcher.lock
+49 silly lockFile f1592cd2-hrome-launcher-0-1-5-package-tgz tar:///Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz
+50 verbose lock tar:///Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz /Users/timothy/.npm/f1592cd2-hrome-launcher-0-1-5-package-tgz.lock
+51 silly gunzTarPerm modes [ '755', '644' ]
+52 silly gunzTarPerm extractEntry package.json
+53 silly gunzTarPerm extractEntry LICENSE
+54 silly gunzTarPerm extractEntry index.js
+55 silly lockFile 4fb6770b-de-modules-karma-chrome-launcher tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
+56 silly lockFile 4fb6770b-de-modules-karma-chrome-launcher tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
+57 silly lockFile f1592cd2-hrome-launcher-0-1-5-package-tgz tar:///Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz
+58 silly lockFile f1592cd2-hrome-launcher-0-1-5-package-tgz tar:///Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz
+59 info preinstall karma-chrome-launcher@0.1.5
+60 verbose readDependencies using package.json deps
+61 verbose readDependencies using package.json deps
+62 silly resolved []
+63 verbose about to build /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
+64 info build /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
+65 verbose linkStuff [ false,
+65 verbose linkStuff   false,
+65 verbose linkStuff   false,
+65 verbose linkStuff   '/Users/timothy/Projects/angularjs-quickstart/node_modules' ]
+66 info linkStuff karma-chrome-launcher@0.1.5
+67 verbose linkBins karma-chrome-launcher@0.1.5
+68 verbose linkMans karma-chrome-launcher@0.1.5
+69 verbose rebuildBundles karma-chrome-launcher@0.1.5
+70 info install karma-chrome-launcher@0.1.5
+71 info postinstall karma-chrome-launcher@0.1.5
+72 verbose saving { 'karma-chrome-launcher': '^0.1.5' }
+73 error Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json'
+73 error  { [Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json']
+73 error   errno: 3,
+73 error   code: 'EACCES',
+73 error   path: '/Users/timothy/Projects/angularjs-quickstart/package.json' }
+74 error Please try running this command again as root/Administrator.
+75 error System Darwin 14.0.0
+76 error command "node" "/usr/local/bin/npm" "install" "karma-chrome-launcher" "--save-dev"
+77 error cwd /Users/timothy/Projects/angularjs-quickstart
+78 error node -v v0.10.33
+79 error npm -v 1.4.28
+80 error path /Users/timothy/Projects/angularjs-quickstart/package.json
+81 error code EACCES
+82 error errno 3
+83 error stack Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json'
+84 verbose exit [ 3, true ]
