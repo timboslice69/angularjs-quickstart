@@ -2,9 +2,6 @@
  * Created by timothy on 24/11/14.
  */
 
-var applicationDependencies = applicationDependencies || {providers: {}};
-
-
 var application = angular
 	.module(
 		'Application',
@@ -12,12 +9,8 @@ var application = angular
 			'ngRoute',
 			'ngResource',
 			'ngSanitize',
-			//'routeResolverServices',
-			'Services',
-			'Controllers',
-			'Filters',
-			'Components',
-			'Directives'
+			'routeResolver',
+			'logging'
 		]
 	)
 	.constant(
@@ -37,30 +30,49 @@ var application = angular
 			playerUpdated: 'Player:updated'
 		}
 	)
-	.provider('$logging', applicationDependencies.providers.loggingProvider)
-	.provider('$analytics', applicationDependencies.providers.analyticsProvider)
-	.provider('$routeResolver', applicationDependencies.providers.routeResolver)
 	.config([
-		'APP_CONFIG', '$routeProvider', '$routeResolverProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$locationProvider','$loggingProvider',
-		function(APP_CONFIG, $routeProvider, $routeResolverProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $locationProvider, $loggingProvider) {
+		'APP_CONFIG', '$routeProvider', '$routeResolverProvider', '$locationProvider', '$compileProvider', '$loggingProvider',
+		function(APP_CONFIG, $routeProvider, $routeResolverProvider, $locationProvider, $compileProvider, $loggingProvider) {
 
 			$loggingProvider.setApp('AngularQuickStart');
+			/*
+			 var log = $loggingProvider.output('log', 'Config'),
+			 error = $loggingProvider.output('error', 'Config'),
+			 debug = $loggingProvider.output('debug', 'Config');
+			 */
 
-			$routeResolverProvider.routeConfig.setBaseDirectories('templates/views/', 'lib/app/controllers/');
+			$routeResolverProvider.setOptions({
+				view: {
+					path: 'templates/views/',
+					fileTemplate: 'View.*.tmpl.html'
+				},
+				service: {
+					path: 'lib/app/services/',
+					fileTemplate: 'Service.*.js',
+					nameTemplate: '*Service'
+				},
+				controller: {
+					path: 'lib/app/controllers/',
+					fileTemplate: 'Controller.*.js',
+					nameTemplate: '*Controller'
+				},
+				filter: {
+					path: 'lib/app/filters/',
+					fileTemplate: 'Filter.*.js',
+					nameTemplate: '*Filter'
+				},
+				directive: {
+					path: 'lib/app/directives/',
+					fileTemplate: 'Directive.*.js',
+					nameTemplate: '*Directive'
+				},
+				component: {
+					path: 'lib/app/components/',
+					fileTemplate: 'Component.*.js',
+					nameTemplate: '*Component'
+				}
+			});
 
-/*			var log = $loggingProvider.output('log', 'Config'),
-				error = $loggingProvider.output('error', 'Config'),
-				debug = $loggingProvider.output('debug', 'Config');*/
-
-
-			application.register =
-			{
-				controller: $controllerProvider.register,
-				directive: $compileProvider.directive,
-				filter: $filterProvider.register,
-				factory: $provide.factory,
-				service: $provide.service
-			};
 
 			/** Set hashbang Mode */
 			$locationProvider.hashPrefix('!');
@@ -70,16 +82,16 @@ var application = angular
 			$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob):|data:image\//);
 
 
-			var route = $routeResolverProvider.route;
-
 			/** Define Routes */
 			$routeProvider
-				.when('/home', route.resolve('Home'))
-				.when('/login', route.resolve('Login', {view: 'Login', controller: 'Login',  service: 'Login'}))
+				.when('/home', $routeResolverProvider.resolve('Home', {view: 'Home', controller: ['Home']}))
+				.when('/login', $routeResolverProvider.resolve('Login', {view: 'Login', controller: 'Login',  service: ['Authentication'], component: ['Icon'], directive: ['Background']}))
+				.when('/elsewhere', $routeResolverProvider.resolve('Elsewhere', {view: 'Login', controller: 'Home',  service: ['Authentication']}))
 				.otherwise({ redirectTo: '/home' });
+
+			console.log('configured');
 		}
 	])
-
 	.run([
 		'$rootScope', '$location', '$window', '$route', '$logging',
 		function($rootScope, $location, $window, $route, $logging) {
@@ -113,3 +125,13 @@ var application = angular
 			});
 		}
 	]);
+
+
+/**
+ * The Magic: routeResolver primes application to accept
+ * module registration immediately, storing them in a temporary queue,
+ * once the angular app is setup the registered modules will be loaded
+ */
+
+$$routeResolver.prime(application);
+

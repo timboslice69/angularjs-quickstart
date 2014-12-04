@@ -1,0 +1,13 @@
+/**
+ * Created by timothy on 03/12/14.
+ */
+
+application.register.controller('MasterController', [
+	// Inject Providers
+	'$rootScope', '$scope', '$route', '$logging', 'APP_CONFIG',
+	// Inject Services
+	function($scope, $rootScope, $logging, APP_CONFIG) {
+		$scope._name = 'MasterController';
+
+	}
+]);

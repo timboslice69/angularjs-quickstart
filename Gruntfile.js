@@ -31,10 +31,23 @@ module.exports = function(grunt) {
 				globals: {
 					jQuery: true,
 					angular: true,
-					console: true
+					console: true,
+					$script: true
 				},
 				reporter: require('jshint-html-reporter'),
-				reporterOutput: 'reports/jshint.html'
+				reporterOutput: 'reports/html/jshint.html'
+			},
+			local: {
+				options: {
+					reporter: require('jshint-html-reporter'),
+					reporterOutput: 'reports/html/jshint.html'
+				}
+			},
+			jenkins: {
+				options: {
+					reporter: require('jshint-junit-reporter'),
+					reporterOutput: 'reports/xml/jshint.xml'
+				}
 			},
 			uses_defaults: ['src/lib/app/*.js']
 		},
@@ -74,7 +87,7 @@ module.exports = function(grunt) {
 							'src/lib/components/angular-resource/angular-resource.min.js',
 							'src/lib/components/angular-route/angular-route.min.js',
 							'src/lib/components/angular-sanitize/angular-sanitize.min.js',
-							'src/lib/components/script.js/dist/script.min.js',
+							'src/lib/components/script.js/dist/script.min.js'
 						]
 					}
 				]
@@ -113,11 +126,11 @@ module.exports = function(grunt) {
 		htmlangular: {
 			options: {
 				tmplext: 'tmpl.html',
-				reportpath: 'reports/html-angular-validate-report.json'
+				reportpath: 'reports/json/html-validation.json'
 			},
 			files: {
 				src: [
-					'src/views/**/*.html'
+					'src/templates/**/*.html'
 				]
 			}
 		},
@@ -279,10 +292,10 @@ module.exports = function(grunt) {
 
 		open : {
 			jshint : {
-				path : 'reports/jshint.html'
+				path : 'reports/html/jshint.html'
 			},
 			unit : {
-				path : 'reports/karma-jasmine-unit-tests.html'
+				path : 'reports/html/ui-unit-tests.html'
 			}
 		}
 
@@ -320,7 +333,7 @@ module.exports = function(grunt) {
 
 	// Build task will test, compile and concat necessary resources putting the output into the build folder
 	grunt.registerTask('build', [
-		//'jshint',
+		'jshint:jenkins',
 		'htmlangular',
 		'sass:build',
 		'karma',
@@ -354,7 +367,7 @@ module.exports = function(grunt) {
 
 	// Test task tests the javascript quality, html quality, scss, quality and then runs the unit tests generating reports into the reports folder
 	grunt.registerTask('test', [
-		'jshint',
+		'jshint:local',
 		'htmlangular',
 		'sass:test',
 		'karma',

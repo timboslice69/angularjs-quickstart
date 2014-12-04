@@ -1,4 +1,4 @@
-describe('HomeCtrl', function() {
+describe('HomeController', function() {
 	var $rootScope, $scope, $controller;
 
 	beforeEach(module('Application'));
@@ -8,7 +8,7 @@ describe('HomeCtrl', function() {
 		$scope = $rootScope.$new();
 		$controller = _$controller_;
 
-		$controller('HomeCtrl', {'$rootScope' : $rootScope, '$scope': $scope});
+		$controller('HomeController', {'$rootScope' : $rootScope, '$scope': $scope});
 	}));
 
 	it('has correct initial values', function() {

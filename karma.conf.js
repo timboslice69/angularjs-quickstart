@@ -7,7 +7,6 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
@@ -20,13 +19,13 @@ module.exports = function(config) {
       'src/lib/components/angular-route/angular-route.js',
       'src/lib/components/angular-sanitize/angular-sanitize.js',
       'src/lib/components/angular-mocks/angular-mocks.js',
-      'src/lib/app/Providers.js',
-      'src/lib/app/Services.js',
-      'src/lib/app/Controllers.js',
-      'src/lib/app/Components.js',
-      'src/lib/app/Directives.js',
-      'src/lib/app/Filters.js',
+      'src/lib/app/providers/*.js',
       'src/lib/app/Application.js',
+      'src/lib/app/services/*.js',
+      'src/lib/app/controllers/*.js',
+      'src/lib/app/directives/*.js',
+      'src/lib/app/components/*.js',
+      'src/lib/app/filters/*.js',
       'tests/**/*.js'
     ],
 
@@ -45,12 +44,15 @@ module.exports = function(config) {
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
 
-
-    reporters: ['progress', 'html'],
+    reporters: ['progress', 'html', 'junit'],
 
     // the default configuration
     htmlReporter: {
-      outputFile: 'reports/karma-jasmine-unit-tests.html'
+      outputFile: 'reports/html/ui-unit-tests.html'
+    },
+
+    junitReporter: {
+      outputFile: 'reports/xml/ui-unit-tests.xml'
     },
 
     // web server port
@@ -72,7 +74,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Safari'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode

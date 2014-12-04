@@ -2,168 +2,291 @@
 1 verbose cli [ 'node',
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
-1 verbose cli   'karma-chrome-launcher',
+1 verbose cli   'karma-junit-reporter',
 1 verbose cli   '--save-dev' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 warn package.json angularjs-quickstart@1.0.0 No description
 5 warn package.json angularjs-quickstart@1.0.0 No README data
-6 verbose readDependencies using package.json deps
-7 verbose cache add [ 'karma-chrome-launcher', null ]
-8 verbose cache add name=undefined spec="karma-chrome-launcher" args=["karma-chrome-launcher",null]
-9 verbose parsed url { protocol: null,
-9 verbose parsed url   slashes: null,
-9 verbose parsed url   auth: null,
-9 verbose parsed url   host: null,
-9 verbose parsed url   port: null,
-9 verbose parsed url   hostname: null,
-9 verbose parsed url   hash: null,
-9 verbose parsed url   search: null,
-9 verbose parsed url   query: null,
-9 verbose parsed url   pathname: 'karma-chrome-launcher',
-9 verbose parsed url   path: 'karma-chrome-launcher',
-9 verbose parsed url   href: 'karma-chrome-launcher' }
-10 silly lockFile 4f6bc915-karma-chrome-launcher karma-chrome-launcher
-11 verbose lock karma-chrome-launcher /Users/timothy/.npm/4f6bc915-karma-chrome-launcher.lock
-12 silly lockFile 4f6bc915-karma-chrome-launcher karma-chrome-launcher
-13 silly lockFile 4f6bc915-karma-chrome-launcher karma-chrome-launcher
-14 verbose addNamed [ 'karma-chrome-launcher', '' ]
-15 verbose addNamed [ null, '*' ]
-16 silly lockFile cd66acf6-karma-chrome-launcher karma-chrome-launcher@
-17 verbose lock karma-chrome-launcher@ /Users/timothy/.npm/cd66acf6-karma-chrome-launcher.lock
-18 silly addNameRange { name: 'karma-chrome-launcher', range: '*', hasData: false }
-19 verbose request where is /karma-chrome-launcher
-20 verbose request registry https://registry.npmjs.org/
-21 verbose request id bbbe5874df9609cd
-22 verbose url raw /karma-chrome-launcher
-23 verbose url resolving [ 'https://registry.npmjs.org/', './karma-chrome-launcher' ]
-24 verbose url resolved https://registry.npmjs.org/karma-chrome-launcher
-25 verbose request where is https://registry.npmjs.org/karma-chrome-launcher
-26 info trying registry request attempt 1 at 17:03:32
-27 verbose etag "3JE0NHD9CKD2YUMUXT6Y2BEQB"
-28 http GET https://registry.npmjs.org/karma-chrome-launcher
-29 http 304 https://registry.npmjs.org/karma-chrome-launcher
-30 silly registry.get cb [ 304,
-30 silly registry.get   { date: 'Fri, 28 Nov 2014 16:03:32 GMT',
-30 silly registry.get     server: 'Apache',
-30 silly registry.get     via: '1.1 varnish',
-30 silly registry.get     'last-modified': 'Fri, 28 Nov 2014 16:03:32 GMT',
+6 warn package.json karma-ie-launcher@0.1.5 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'karma-junit-reporter', null ]
+9 verbose cache add name=undefined spec="karma-junit-reporter" args=["karma-junit-reporter",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'karma-junit-reporter',
+10 verbose parsed url   path: 'karma-junit-reporter',
+10 verbose parsed url   href: 'karma-junit-reporter' }
+11 silly lockFile 86dd30d2-karma-junit-reporter karma-junit-reporter
+12 verbose lock karma-junit-reporter /Users/timothy/.npm/86dd30d2-karma-junit-reporter.lock
+13 silly lockFile 86dd30d2-karma-junit-reporter karma-junit-reporter
+14 silly lockFile 86dd30d2-karma-junit-reporter karma-junit-reporter
+15 verbose addNamed [ 'karma-junit-reporter', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile 5bad7edb-karma-junit-reporter karma-junit-reporter@
+18 verbose lock karma-junit-reporter@ /Users/timothy/.npm/5bad7edb-karma-junit-reporter.lock
+19 silly addNameRange { name: 'karma-junit-reporter', range: '*', hasData: false }
+20 verbose request where is /karma-junit-reporter
+21 verbose request registry https://registry.npmjs.org/
+22 verbose request id 6c0699ac868f196b
+23 verbose url raw /karma-junit-reporter
+24 verbose url resolving [ 'https://registry.npmjs.org/', './karma-junit-reporter' ]
+25 verbose url resolved https://registry.npmjs.org/karma-junit-reporter
+26 verbose request where is https://registry.npmjs.org/karma-junit-reporter
+27 info trying registry request attempt 1 at 10:51:36
+28 http GET https://registry.npmjs.org/karma-junit-reporter
+29 http 200 https://registry.npmjs.org/karma-junit-reporter
+30 silly registry.get cb [ 200,
+30 silly registry.get   { date: 'Thu, 04 Dec 2014 09:51:37 GMT',
+30 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 silly registry.get     etag: '"9H5OGXAD75VVEE6ISGYK8MSE4"',
+30 silly registry.get     'content-type': 'application/json',
 30 silly registry.get     'cache-control': 'max-age=60',
-30 silly registry.get     etag: '"3JE0NHD9CKD2YUMUXT6Y2BEQB"',
-30 silly registry.get     age: '21',
+30 silly registry.get     'content-length': '8172',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '0',
 30 silly registry.get     'x-served-by': 'cache-ams4120-AMS',
 30 silly registry.get     'x-cache': 'HIT',
 30 silly registry.get     'x-cache-hits': '1',
-30 silly registry.get     'x-timer': 'S1417190612.827167,VS0,VE0',
+30 silly registry.get     'x-timer': 'S1417686696.426759,VS0,VE644',
 30 silly registry.get     vary: 'Accept',
-30 silly registry.get     'content-length': '0',
 30 silly registry.get     'keep-alive': 'timeout=10, max=50',
 30 silly registry.get     connection: 'Keep-Alive' } ]
-31 verbose etag https://registry.npmjs.org/karma-chrome-launcher from cache
-32 silly addNameRange number 2 { name: 'karma-chrome-launcher', range: '*', hasData: true }
-33 silly addNameRange versions [ 'karma-chrome-launcher',
-33 silly addNameRange   [ '0.0.1',
-33 silly addNameRange     '0.0.2',
-33 silly addNameRange     '0.1.0',
-33 silly addNameRange     '0.1.1',
-33 silly addNameRange     '0.1.2',
-33 silly addNameRange     '0.1.3',
-33 silly addNameRange     '0.1.4',
-33 silly addNameRange     '0.1.5' ] ]
-34 verbose addNamed [ 'karma-chrome-launcher', '0.1.5' ]
-35 verbose addNamed [ '0.1.5', '0.1.5' ]
-36 silly lockFile 8243f81a-karma-chrome-launcher-0-1-5 karma-chrome-launcher@0.1.5
-37 verbose lock karma-chrome-launcher@0.1.5 /Users/timothy/.npm/8243f81a-karma-chrome-launcher-0-1-5.lock
-38 silly lockFile 8243f81a-karma-chrome-launcher-0-1-5 karma-chrome-launcher@0.1.5
-39 silly lockFile 8243f81a-karma-chrome-launcher-0-1-5 karma-chrome-launcher@0.1.5
-40 silly lockFile cd66acf6-karma-chrome-launcher karma-chrome-launcher@
-41 silly lockFile cd66acf6-karma-chrome-launcher karma-chrome-launcher@
-42 silly resolved [ { name: 'karma-chrome-launcher',
-42 silly resolved     version: '0.1.5',
-42 silly resolved     description: 'A Karma plugin. Launcher for Chrome and Chrome Canary.',
-42 silly resolved     main: 'index.js',
-42 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
-42 silly resolved     repository:
-42 silly resolved      { type: 'git',
-42 silly resolved        url: 'git://github.com/karma-runner/karma-chrome-launcher.git' },
-42 silly resolved     keywords: [ 'karma-plugin', 'karma-launcher', 'chrome' ],
-42 silly resolved     author: { name: 'Vojta Jina', email: 'vojta.jina@gmail.com' },
-42 silly resolved     dependencies: {},
-42 silly resolved     peerDependencies: { karma: '>=0.9.3' },
-42 silly resolved     license: 'MIT',
-42 silly resolved     devDependencies:
-42 silly resolved      { grunt: '~0.4.1',
-42 silly resolved        'grunt-npm': '~0.0.2',
-42 silly resolved        'grunt-bump': '~0.0.6',
-42 silly resolved        'grunt-auto-release': '~0.0.2' },
-42 silly resolved     contributors:
-42 silly resolved      [ [Object],
-42 silly resolved        [Object],
-42 silly resolved        [Object],
-42 silly resolved        [Object],
-42 silly resolved        [Object],
-42 silly resolved        [Object],
-42 silly resolved        [Object] ],
-42 silly resolved     bugs: { url: 'https://github.com/karma-runner/karma-chrome-launcher/issues' },
-42 silly resolved     homepage: 'https://github.com/karma-runner/karma-chrome-launcher',
-42 silly resolved     _id: 'karma-chrome-launcher@0.1.5',
-42 silly resolved     dist:
-42 silly resolved      { shasum: '70e95dca5c4d7a15884850daa3ab60d648dbfe8b',
-42 silly resolved        tarball: 'http://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.1.5.tgz' },
-42 silly resolved     _from: 'karma-chrome-launcher@',
-42 silly resolved     _npmVersion: '1.4.4',
-42 silly resolved     _npmUser: { name: 'vojtajina', email: 'vojta.jina@gmail.com' },
-42 silly resolved     maintainers: [ [Object] ],
-42 silly resolved     directories: {},
-42 silly resolved     _shasum: '70e95dca5c4d7a15884850daa3ab60d648dbfe8b',
-42 silly resolved     _resolved: 'https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.1.5.tgz',
-42 silly resolved     readme: 'ERROR: No README data found!' } ]
-43 info install karma-chrome-launcher@0.1.5 into /Users/timothy/Projects/angularjs-quickstart
-44 info installOne karma-chrome-launcher@0.1.5
-45 verbose node_modules/karma-chrome-launcher unbuild
-46 verbose tar unpack /Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz
-47 silly lockFile 4fb6770b-de-modules-karma-chrome-launcher tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
-48 verbose lock tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher /Users/timothy/.npm/4fb6770b-de-modules-karma-chrome-launcher.lock
-49 silly lockFile f1592cd2-hrome-launcher-0-1-5-package-tgz tar:///Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz
-50 verbose lock tar:///Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz /Users/timothy/.npm/f1592cd2-hrome-launcher-0-1-5-package-tgz.lock
-51 silly gunzTarPerm modes [ '755', '644' ]
-52 silly gunzTarPerm extractEntry package.json
-53 silly gunzTarPerm extractEntry LICENSE
-54 silly gunzTarPerm extractEntry index.js
-55 silly lockFile 4fb6770b-de-modules-karma-chrome-launcher tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
-56 silly lockFile 4fb6770b-de-modules-karma-chrome-launcher tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
-57 silly lockFile f1592cd2-hrome-launcher-0-1-5-package-tgz tar:///Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz
-58 silly lockFile f1592cd2-hrome-launcher-0-1-5-package-tgz tar:///Users/timothy/.npm/karma-chrome-launcher/0.1.5/package.tgz
-59 info preinstall karma-chrome-launcher@0.1.5
-60 verbose readDependencies using package.json deps
-61 verbose readDependencies using package.json deps
-62 silly resolved []
-63 verbose about to build /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
-64 info build /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-chrome-launcher
-65 verbose linkStuff [ false,
-65 verbose linkStuff   false,
-65 verbose linkStuff   false,
-65 verbose linkStuff   '/Users/timothy/Projects/angularjs-quickstart/node_modules' ]
-66 info linkStuff karma-chrome-launcher@0.1.5
-67 verbose linkBins karma-chrome-launcher@0.1.5
-68 verbose linkMans karma-chrome-launcher@0.1.5
-69 verbose rebuildBundles karma-chrome-launcher@0.1.5
-70 info install karma-chrome-launcher@0.1.5
-71 info postinstall karma-chrome-launcher@0.1.5
-72 verbose saving { 'karma-chrome-launcher': '^0.1.5' }
-73 error Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json'
-73 error  { [Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json']
-73 error   errno: 3,
-73 error   code: 'EACCES',
-73 error   path: '/Users/timothy/Projects/angularjs-quickstart/package.json' }
-74 error Please try running this command again as root/Administrator.
-75 error System Darwin 14.0.0
-76 error command "node" "/usr/local/bin/npm" "install" "karma-chrome-launcher" "--save-dev"
-77 error cwd /Users/timothy/Projects/angularjs-quickstart
-78 error node -v v0.10.33
-79 error npm -v 1.4.28
-80 error path /Users/timothy/Projects/angularjs-quickstart/package.json
-81 error code EACCES
-82 error errno 3
-83 error stack Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json'
-84 verbose exit [ 3, true ]
+31 silly addNameRange number 2 { name: 'karma-junit-reporter', range: '*', hasData: true }
+32 silly addNameRange versions [ 'karma-junit-reporter',
+32 silly addNameRange   [ '0.0.1', '0.0.2', '0.1.0', '0.2.1', '0.2.2' ] ]
+33 verbose addNamed [ 'karma-junit-reporter', '0.2.2' ]
+34 verbose addNamed [ '0.2.2', '0.2.2' ]
+35 silly lockFile 9c865114-karma-junit-reporter-0-2-2 karma-junit-reporter@0.2.2
+36 verbose lock karma-junit-reporter@0.2.2 /Users/timothy/.npm/9c865114-karma-junit-reporter-0-2-2.lock
+37 silly lockFile d2d30e51-r-karma-junit-reporter-0-2-2-tgz https://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz
+38 verbose lock https://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz /Users/timothy/.npm/d2d30e51-r-karma-junit-reporter-0-2-2-tgz.lock
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz',
+39 verbose addRemoteTarball   '4cdd4e21affd3e090e7ba73e3c766ea9e13c45ba' ]
+40 info retry fetch attempt 1 at 10:51:37
+41 verbose fetch to= /var/folders/jb/kffghnjj1wjfs3486pbhyl280000gn/T/npm-4795-UEnjMpmY/registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz
+42 http GET https://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz
+43 http 200 https://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz
+44 silly lockFile d2d30e51-r-karma-junit-reporter-0-2-2-tgz https://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz
+45 silly lockFile d2d30e51-r-karma-junit-reporter-0-2-2-tgz https://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz
+46 silly lockFile 9c865114-karma-junit-reporter-0-2-2 karma-junit-reporter@0.2.2
+47 silly lockFile 9c865114-karma-junit-reporter-0-2-2 karma-junit-reporter@0.2.2
+48 silly lockFile 5bad7edb-karma-junit-reporter karma-junit-reporter@
+49 silly lockFile 5bad7edb-karma-junit-reporter karma-junit-reporter@
+50 silly resolved [ { name: 'karma-junit-reporter',
+50 silly resolved     version: '0.2.2',
+50 silly resolved     description: 'A Karma plugin. Report results in junit xml format.',
+50 silly resolved     main: 'index.js',
+50 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+50 silly resolved     repository:
+50 silly resolved      { type: 'git',
+50 silly resolved        url: 'git://github.com/karma-runner/karma-junit-reporter.git' },
+50 silly resolved     keywords: [ 'karma-plugin', 'karma-reporter', 'junit' ],
+50 silly resolved     author: { name: 'Vojta Jina', email: 'vojta.jina@gmail.com' },
+50 silly resolved     dependencies: { xmlbuilder: '0.4.2' },
+50 silly resolved     peerDependencies: { karma: '>=0.9' },
+50 silly resolved     license: 'MIT',
+50 silly resolved     devDependencies:
+50 silly resolved      { grunt: '~0.4.1',
+50 silly resolved        'grunt-npm': '~0.0.2',
+50 silly resolved        'grunt-bump': '~0.0.7',
+50 silly resolved        'grunt-auto-release': '~0.0.2' },
+50 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+50 silly resolved     bugs: { url: 'https://github.com/karma-runner/karma-junit-reporter/issues' },
+50 silly resolved     homepage: 'https://github.com/karma-runner/karma-junit-reporter',
+50 silly resolved     _id: 'karma-junit-reporter@0.2.2',
+50 silly resolved     dist:
+50 silly resolved      { shasum: '4cdd4e21affd3e090e7ba73e3c766ea9e13c45ba',
+50 silly resolved        tarball: 'http://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz' },
+50 silly resolved     _from: 'karma-junit-reporter@',
+50 silly resolved     _npmVersion: '1.4.4',
+50 silly resolved     _npmUser: { name: 'vojtajina', email: 'vojta.jina@gmail.com' },
+50 silly resolved     maintainers: [ [Object] ],
+50 silly resolved     directories: {},
+50 silly resolved     _shasum: '4cdd4e21affd3e090e7ba73e3c766ea9e13c45ba',
+50 silly resolved     _resolved: 'https://registry.npmjs.org/karma-junit-reporter/-/karma-junit-reporter-0.2.2.tgz' } ]
+51 info install karma-junit-reporter@0.2.2 into /Users/timothy/Projects/angularjs-quickstart
+52 info installOne karma-junit-reporter@0.2.2
+53 verbose node_modules/karma-junit-reporter unbuild
+54 verbose tar unpack /Users/timothy/.npm/karma-junit-reporter/0.2.2/package.tgz
+55 silly lockFile 4204e263-ode-modules-karma-junit-reporter tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter
+56 verbose lock tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter /Users/timothy/.npm/4204e263-ode-modules-karma-junit-reporter.lock
+57 silly lockFile bbf6b730-junit-reporter-0-2-2-package-tgz tar:///Users/timothy/.npm/karma-junit-reporter/0.2.2/package.tgz
+58 verbose lock tar:///Users/timothy/.npm/karma-junit-reporter/0.2.2/package.tgz /Users/timothy/.npm/bbf6b730-junit-reporter-0-2-2-package-tgz.lock
+59 silly gunzTarPerm modes [ '755', '644' ]
+60 silly gunzTarPerm extractEntry package.json
+61 silly gunzTarPerm extractEntry README.md
+62 silly gunzTarPerm extractEntry LICENSE
+63 silly gunzTarPerm extractEntry index.js
+64 silly lockFile 4204e263-ode-modules-karma-junit-reporter tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter
+65 silly lockFile 4204e263-ode-modules-karma-junit-reporter tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter
+66 silly lockFile bbf6b730-junit-reporter-0-2-2-package-tgz tar:///Users/timothy/.npm/karma-junit-reporter/0.2.2/package.tgz
+67 silly lockFile bbf6b730-junit-reporter-0-2-2-package-tgz tar:///Users/timothy/.npm/karma-junit-reporter/0.2.2/package.tgz
+68 info preinstall karma-junit-reporter@0.2.2
+69 verbose readDependencies using package.json deps
+70 verbose readDependencies using package.json deps
+71 verbose cache add [ 'xmlbuilder@0.4.2', null ]
+72 verbose cache add name=undefined spec="xmlbuilder@0.4.2" args=["xmlbuilder@0.4.2",null]
+73 verbose parsed url { protocol: null,
+73 verbose parsed url   slashes: null,
+73 verbose parsed url   auth: null,
+73 verbose parsed url   host: null,
+73 verbose parsed url   port: null,
+73 verbose parsed url   hostname: null,
+73 verbose parsed url   hash: null,
+73 verbose parsed url   search: null,
+73 verbose parsed url   query: null,
+73 verbose parsed url   pathname: 'xmlbuilder@0.4.2',
+73 verbose parsed url   path: 'xmlbuilder@0.4.2',
+73 verbose parsed url   href: 'xmlbuilder@0.4.2' }
+74 verbose cache add name="xmlbuilder" spec="0.4.2" args=["xmlbuilder","0.4.2"]
+75 verbose parsed url { protocol: null,
+75 verbose parsed url   slashes: null,
+75 verbose parsed url   auth: null,
+75 verbose parsed url   host: null,
+75 verbose parsed url   port: null,
+75 verbose parsed url   hostname: null,
+75 verbose parsed url   hash: null,
+75 verbose parsed url   search: null,
+75 verbose parsed url   query: null,
+75 verbose parsed url   pathname: '0.4.2',
+75 verbose parsed url   path: '0.4.2',
+75 verbose parsed url   href: '0.4.2' }
+76 verbose addNamed [ 'xmlbuilder', '0.4.2' ]
+77 verbose addNamed [ '0.4.2', '0.4.2' ]
+78 silly lockFile b92b370d-xmlbuilder-0-4-2 xmlbuilder@0.4.2
+79 verbose lock xmlbuilder@0.4.2 /Users/timothy/.npm/b92b370d-xmlbuilder-0-4-2.lock
+80 verbose request where is /xmlbuilder
+81 verbose request registry https://registry.npmjs.org/
+82 verbose url raw /xmlbuilder
+83 verbose url resolving [ 'https://registry.npmjs.org/', './xmlbuilder' ]
+84 verbose url resolved https://registry.npmjs.org/xmlbuilder
+85 verbose request where is https://registry.npmjs.org/xmlbuilder
+86 info trying registry request attempt 1 at 10:51:37
+87 verbose etag "7JWLQMUEMF1ZRIESUF9ZMHYZ4"
+88 http GET https://registry.npmjs.org/xmlbuilder
+89 http 304 https://registry.npmjs.org/xmlbuilder
+90 silly registry.get cb [ 304,
+90 silly registry.get   { date: 'Thu, 04 Dec 2014 09:51:37 GMT',
+90 silly registry.get     server: 'Apache',
+90 silly registry.get     via: '1.1 varnish',
+90 silly registry.get     'last-modified': 'Thu, 04 Dec 2014 09:51:37 GMT',
+90 silly registry.get     'cache-control': 'max-age=60',
+90 silly registry.get     etag: '"7JWLQMUEMF1ZRIESUF9ZMHYZ4"',
+90 silly registry.get     age: '6',
+90 silly registry.get     'x-served-by': 'cache-ams4140-AMS',
+90 silly registry.get     'x-cache': 'HIT',
+90 silly registry.get     'x-cache-hits': '1',
+90 silly registry.get     'x-timer': 'S1417686697.378609,VS0,VE0',
+90 silly registry.get     vary: 'Accept',
+90 silly registry.get     'content-length': '0',
+90 silly registry.get     'keep-alive': 'timeout=10, max=50',
+90 silly registry.get     connection: 'Keep-Alive' } ]
+91 verbose etag https://registry.npmjs.org/xmlbuilder from cache
+92 silly lockFile b92b370d-xmlbuilder-0-4-2 xmlbuilder@0.4.2
+93 silly lockFile b92b370d-xmlbuilder-0-4-2 xmlbuilder@0.4.2
+94 silly resolved [ { name: 'xmlbuilder',
+94 silly resolved     version: '0.4.2',
+94 silly resolved     keywords: [ 'xml', 'xmlbuilder' ],
+94 silly resolved     homepage: 'http://github.com/oozcitak/xmlbuilder-js',
+94 silly resolved     description: 'An XML builder for node.js',
+94 silly resolved     author: { name: 'Ozgur Ozcitak', email: 'oozcitak@gmail.com' },
+94 silly resolved     licenses: [ [Object] ],
+94 silly resolved     repository:
+94 silly resolved      { type: 'git',
+94 silly resolved        url: 'git://github.com/oozcitak/xmlbuilder-js.git' },
+94 silly resolved     bugs: { url: 'http://github.com/oozcitak/xmlbuilder-js/issues' },
+94 silly resolved     main: './lib/index',
+94 silly resolved     engines: { node: '>=0.2.0' },
+94 silly resolved     devDependencies: { 'coffee-script': '1.1.x' },
+94 silly resolved     scripts: { test: 'make test' },
+94 silly resolved     _npmUser: { name: 'oozcitak', email: 'oozcitak@gmail.com' },
+94 silly resolved     _id: 'xmlbuilder@0.4.2',
+94 silly resolved     dependencies: {},
+94 silly resolved     _engineSupported: true,
+94 silly resolved     _npmVersion: '1.1.0-alpha-2',
+94 silly resolved     _nodeVersion: 'v0.6.3',
+94 silly resolved     _defaultsLoaded: true,
+94 silly resolved     dist:
+94 silly resolved      { shasum: '1776d65f3fdbad470a08d8604cdeb1c4e540ff83',
+94 silly resolved        tarball: 'http://registry.npmjs.org/xmlbuilder/-/xmlbuilder-0.4.2.tgz' },
+94 silly resolved     maintainers: [ [Object] ],
+94 silly resolved     directories: {},
+94 silly resolved     _shasum: '1776d65f3fdbad470a08d8604cdeb1c4e540ff83',
+94 silly resolved     _from: 'xmlbuilder@0.4.2',
+94 silly resolved     _resolved: 'https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-0.4.2.tgz',
+94 silly resolved     readme: 'ERROR: No README data found!' } ]
+95 info install xmlbuilder@0.4.2 into /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter
+96 info installOne xmlbuilder@0.4.2
+97 verbose node_modules/karma-junit-reporter/node_modules/xmlbuilder unbuild
+98 verbose tar unpack /Users/timothy/.npm/xmlbuilder/0.4.2/package.tgz
+99 silly lockFile 61fbb4d1-reporter-node-modules-xmlbuilder tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter/node_modules/xmlbuilder
+100 verbose lock tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter/node_modules/xmlbuilder /Users/timothy/.npm/61fbb4d1-reporter-node-modules-xmlbuilder.lock
+101 silly lockFile 375f9a9f-npm-xmlbuilder-0-4-2-package-tgz tar:///Users/timothy/.npm/xmlbuilder/0.4.2/package.tgz
+102 verbose lock tar:///Users/timothy/.npm/xmlbuilder/0.4.2/package.tgz /Users/timothy/.npm/375f9a9f-npm-xmlbuilder-0-4-2-package-tgz.lock
+103 silly gunzTarPerm modes [ '755', '644' ]
+104 silly gunzTarPerm extractEntry package.json
+105 silly gunzTarPerm extractEntry README.md
+106 silly gunzTarPerm extractEntry .npmignore
+107 silly gunzTarPerm extractEntry lib/
+108 silly gunzTarPerm extractEntry lib/XMLFragment.js
+109 silly gunzTarPerm extractEntry lib/XMLBuilder.js
+110 silly gunzTarPerm extractEntry lib/index.js
+111 silly lockFile 61fbb4d1-reporter-node-modules-xmlbuilder tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter/node_modules/xmlbuilder
+112 silly lockFile 61fbb4d1-reporter-node-modules-xmlbuilder tar:///Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter/node_modules/xmlbuilder
+113 silly lockFile 375f9a9f-npm-xmlbuilder-0-4-2-package-tgz tar:///Users/timothy/.npm/xmlbuilder/0.4.2/package.tgz
+114 silly lockFile 375f9a9f-npm-xmlbuilder-0-4-2-package-tgz tar:///Users/timothy/.npm/xmlbuilder/0.4.2/package.tgz
+115 info preinstall xmlbuilder@0.4.2
+116 verbose readDependencies using package.json deps
+117 verbose readDependencies using package.json deps
+118 silly resolved []
+119 verbose about to build /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter/node_modules/xmlbuilder
+120 info build /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter/node_modules/xmlbuilder
+121 verbose linkStuff [ false,
+121 verbose linkStuff   false,
+121 verbose linkStuff   false,
+121 verbose linkStuff   '/Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter/node_modules' ]
+122 info linkStuff xmlbuilder@0.4.2
+123 verbose linkBins xmlbuilder@0.4.2
+124 verbose linkMans xmlbuilder@0.4.2
+125 verbose rebuildBundles xmlbuilder@0.4.2
+126 info install xmlbuilder@0.4.2
+127 info postinstall xmlbuilder@0.4.2
+128 verbose about to build /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter
+129 info build /Users/timothy/Projects/angularjs-quickstart/node_modules/karma-junit-reporter
+130 verbose linkStuff [ false,
+130 verbose linkStuff   false,
+130 verbose linkStuff   false,
+130 verbose linkStuff   '/Users/timothy/Projects/angularjs-quickstart/node_modules' ]
+131 info linkStuff karma-junit-reporter@0.2.2
+132 verbose linkBins karma-junit-reporter@0.2.2
+133 verbose linkMans karma-junit-reporter@0.2.2
+134 verbose rebuildBundles karma-junit-reporter@0.2.2
+135 verbose rebuildBundles [ 'xmlbuilder' ]
+136 info install karma-junit-reporter@0.2.2
+137 info postinstall karma-junit-reporter@0.2.2
+138 verbose saving { 'karma-junit-reporter': '^0.2.2' }
+139 error Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json'
+139 error  { [Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json']
+139 error   errno: 3,
+139 error   code: 'EACCES',
+139 error   path: '/Users/timothy/Projects/angularjs-quickstart/package.json' }
+140 error Please try running this command again as root/Administrator.
+141 error System Darwin 14.0.0
+142 error command "node" "/usr/local/bin/npm" "install" "karma-junit-reporter" "--save-dev"
+143 error cwd /Users/timothy/Projects/angularjs-quickstart
+144 error node -v v0.10.33
+145 error npm -v 1.4.28
+146 error path /Users/timothy/Projects/angularjs-quickstart/package.json
+147 error code EACCES
+148 error errno 3
+149 error stack Error: EACCES, open '/Users/timothy/Projects/angularjs-quickstart/package.json'
+150 verbose exit [ 3, true ]

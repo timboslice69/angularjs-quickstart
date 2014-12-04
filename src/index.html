@@ -13,22 +13,22 @@
 	<!-- endbuild -->
 
 	<!-- build:js dist/lib/app.js -->
-		<script type="text/javascript" src="lib/app/Providers.js"></script>
+		<script type="text/javascript" src="lib/app/providers/Provider.RouteResolver.js"></script>
+		<script type="text/javascript" src="lib/app/providers/Provider.Logging.js"></script>
 		<script type="text/javascript" src="lib/app/Application.js"></script>
-		<script type="text/javascript" src="lib/app/Components.js"></script>
-		<script type="text/javascript" src="lib/app/Controllers.js"></script>
-		<script type="text/javascript" src="lib/app/Directives.js"></script>
-		<script type="text/javascript" src="lib/app/Filters.js"></script>
-		<script type="text/javascript" src="lib/app/Services.js"></script>
-		<script type="text/javascript" src="lib/app/controllers/Controller.Login.js"></script>
+		<script type="text/javascript" src="lib/app/controllers/Controller.Master.js"></script>
 	<!-- endbuild -->
 
 </head>
-<body ng-controller="MasterCtrl">
+<body ng-controller="MasterController">
 
-{{_name}}
+	<main id="view" ng-view></main>
 
-<main id="view" ng-view></main>
+<nav>
+	<a href="#!/login">Login</a>
+	<a href="#!/home">home</a>
+	<a href="#!/elsewhere">elsewhere</a>
+</nav>
 
 </body>
 </html>
