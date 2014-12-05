@@ -123,6 +123,7 @@ var application = angular
 				// Log.pathChange($location.path());
 
 			});
+
 		}
 	]);
 

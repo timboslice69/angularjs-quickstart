@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Chrome 39.0.2171 (Mac OS X 10.10.1)" package="" timestamp="2014-12-05T09:19:13" id="0" hostname="Timothys-MacBook-Pro.local" tests="2" errors="0" failures="1" time="0.034">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36"/>
+    </properties>
+    <testcase name="has correct initial values" time="0.022" classname="Chrome 39.0.2171 (Mac OS X 10.10.1).Jasmine__TopLevel__Suite HomeController"/>
+    <testcase name="increments correctly" time="0.012" classname="Chrome 39.0.2171 (Mac OS X 10.10.1).Jasmine__TopLevel__Suite HomeController">
+      <failure type="">Error: [ng:areq] Argument &apos;HomeController&apos; is not a function, got undefined
+http://errors.angularjs.org/1.3.4/ng/areq?p0=HomeController&amp;p1=not%20a%20function%2C%20got%20undefined
+    at /Users/timothy/Projects/angularjs-quickstart/src/lib/components/angular/angular.js:63:12
+    at assertArg (/Users/timothy/Projects/angularjs-quickstart/src/lib/components/angular/angular.js:1560:11)
+    at assertArgFn (/Users/timothy/Projects/angularjs-quickstart/src/lib/components/angular/angular.js:1570:3)
+    at /Users/timothy/Projects/angularjs-quickstart/src/lib/components/angular/angular.js:8353:9
+    at Object.&lt;anonymous&gt; (/Users/timothy/Projects/angularjs-quickstart/tests/controllers/test.controller.home.js:11:3)
+    at Object.invoke (/Users/timothy/Projects/angularjs-quickstart/src/lib/components/angular/angular.js:4138:17)
+    at Object.workFn (/Users/timothy/Projects/angularjs-quickstart/src/lib/components/angular-mocks/angular-mocks.js:2348:20)
+</failure>
+      <failure type="">TypeError: undefined is not a function
+    at Object.&lt;anonymous&gt; (/Users/timothy/Projects/angularjs-quickstart/tests/controllers/test.controller.home.js:19:10)
+</failure>
+    </testcase>
+    <system-out><![CDATA[Chrome 39.0.2171 (Mac OS X 10.10.1) LOG: 'login controller'
+,Chrome 39.0.2171 (Mac OS X 10.10.1) LOG: 'configured'
+,Chrome 39.0.2171 (Mac OS X 10.10.1) LOG: 'when is this called?'
+,Chrome 39.0.2171 (Mac OS X 10.10.1) LOG: 'configured'
+,Chrome 39.0.2171 (Mac OS X 10.10.1) LOG: 'when is this called?'
+
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

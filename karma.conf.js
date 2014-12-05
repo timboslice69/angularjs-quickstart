@@ -19,6 +19,7 @@ module.exports = function(config) {
       'src/lib/components/angular-route/angular-route.js',
       'src/lib/components/angular-sanitize/angular-sanitize.js',
       'src/lib/components/angular-mocks/angular-mocks.js',
+      'tests/testdelay.js',
       'src/lib/app/providers/*.js',
       'src/lib/app/Application.js',
       'src/lib/app/services/*.js',
@@ -44,7 +45,7 @@ module.exports = function(config) {
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
 
-    reporters: ['progress', 'html', 'junit'],
+    reporters: ['progress', 'html'],
 
     // the default configuration
     htmlReporter: {
@@ -74,7 +75,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode

@@ -59,7 +59,9 @@ module.exports = function(grunt) {
 				files: [
 					{expand: true, cwd: 'src/', src: ['*.html'], dest: 'dist/'},
 					{expand: true, cwd: 'src/templates', src: ['**/*.html'], dest: 'dist/templates'},
-					{expand: true, cwd: 'src/style/css', src: ['*.css'], dest: 'dist/style/css'}
+					{expand: true, cwd: 'src/style/css', src: ['*.css'], dest: 'dist/style/css'},
+					{expand: true, flatten: true, cwd: 'src/lib/components', src: ['**/*.map'], dest: 'dist/lib'},
+					{expand: true, cwd: 'src/lib/app', src: ['**/*.js', '!Application.js', '!**/providers/**'], dest: 'dist/lib/app'}
 				]
 			}
 		},
@@ -74,7 +76,11 @@ module.exports = function(grunt) {
 				files: [
 					{
 						dest: '.tmp/concat/lib/application.js',
-						src: ['src/lib/app/*.js']
+						src: [
+							'src/lib/app/providers/*.js',
+							'src/lib/app/*.js',
+							'src/lib/app/controllers/Controller.Master.js'
+						]
 					}
 				]
 			},
