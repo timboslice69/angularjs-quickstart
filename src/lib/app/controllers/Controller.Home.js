@@ -2,7 +2,7 @@
  * Created by timothy on 27/11/14.
  */
 
-application.register.controller('HomeController', [
+resourceResolver.register.controller('HomeController', [
 	'$rootScope', '$scope', '$route', '$logging', 'APP_CONFIG',
 	function($rootScope, $scope, $logging, APP_CONFIG) {
 

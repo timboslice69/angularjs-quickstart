@@ -9,7 +9,7 @@ var application = angular
 			'ngRoute',
 			'ngResource',
 			'ngSanitize',
-			'routeResolver',
+			'resourceResolver',
 			'logging'
 		]
 	)
@@ -31,8 +31,8 @@ var application = angular
 		}
 	)
 	.config([
-		'APP_CONFIG', '$routeProvider', '$routeResolverProvider', '$locationProvider', '$compileProvider', '$loggingProvider',
-		function(APP_CONFIG, $routeProvider, $routeResolverProvider, $locationProvider, $compileProvider, $loggingProvider) {
+		'APP_CONFIG', '$routeProvider', '$resourceResolverProvider', '$locationProvider', '$compileProvider', '$loggingProvider',
+		function(APP_CONFIG, $routeProvider, $resourceResolverProvider, $locationProvider, $compileProvider, $loggingProvider) {
 
 			$loggingProvider.setApp('AngularQuickStart');
 			/*
@@ -41,7 +41,7 @@ var application = angular
 			 debug = $loggingProvider.output('debug', 'Config');
 			 */
 
-			$routeResolverProvider.setOptions({
+			$resourceResolverProvider.setOptions({
 				view: {
 					path: 'templates/views/',
 					fileTemplate: 'View.*.tmpl.html'
@@ -82,14 +82,34 @@ var application = angular
 			$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob):|data:image\//);
 
 
+
+			/** Define Default Modules */
+			$resourceResolverProvider.require({
+				controller: ['Master'],
+				service: ['Authentication'],
+				component: [],
+				directive: []
+			});
+
+
 			/** Define Routes */
 			$routeProvider
-				.when('/home', $routeResolverProvider.resolve('Home', {view: 'Home', controller: ['Home']}))
-				.when('/login', $routeResolverProvider.resolve('Login', {view: 'Login', controller: 'Login',  service: ['Authentication'], component: ['Icon'], directive: ['Background']}))
-				.when('/elsewhere', $routeResolverProvider.resolve('Elsewhere', {view: 'Login', controller: 'Home',  service: ['Authentication']}))
+				.when(
+					'/login',
+					$resourceResolverProvider.resolve({
+						view: ['Login'],
+						controller: ['Login'],
+						service: ['Login'],
+						directive: []
+					}))
+				.when(
+					'/home',
+					$resourceResolverProvider.resolve({
+						view: ['Home'],
+						controller: ['Home'],
+						component: []
+					}))
 				.otherwise({ redirectTo: '/home' });
-
-			console.log('configured');
 		}
 	])
 	.run([
@@ -126,13 +146,4 @@ var application = angular
 
 		}
 	]);
-
-
-/**
- * The Magic: routeResolver primes application to accept
- * module registration immediately, storing them in a temporary queue,
- * once the angular app is setup the registered modules will be loaded
- */
-
-$$routeResolver.prime(application);
 

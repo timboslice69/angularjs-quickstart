@@ -2,7 +2,7 @@
  * Created by timothy on 03/12/14.
  */
 
-application.register.controller('MasterController', [
+resourceResolver.register.controller('MasterController', [
 	// Inject Providers
 	'$rootScope', '$scope', '$route', '$logging', 'APP_CONFIG',
 	// Inject Services
