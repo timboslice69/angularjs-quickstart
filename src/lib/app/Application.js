@@ -107,6 +107,7 @@ var application = angular
 					$resourceResolverProvider.resolve({
 						view: ['Home'],
 						controller: ['Home'],
+						service: ['RestExample'],
 						component: []
 					}))
 				.otherwise({ redirectTo: '/home' });

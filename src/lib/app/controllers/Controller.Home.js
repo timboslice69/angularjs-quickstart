@@ -3,20 +3,12 @@
  */
 
 resourceResolver.register.controller('HomeController', [
-	'$rootScope', '$scope', '$route', '$logging', 'APP_CONFIG',
-	function($rootScope, $scope, $logging, APP_CONFIG) {
-
+	'$rootScope', '$scope', '$route', '$logging', 'APP_CONFIG', 'RestExampleService',
+	function($rootScope, $scope, $logging, APP_CONFIG, RestExampleService) {
 		$scope._name = 'HomeController';
 
-		//var log = $log.output('log', $scope._name);
-		$scope.quantity = 0;
-
 		$scope.init = function() {
-			$scope.quantity = 0;
-		};
-
-		$scope.increaseQuantity = function(){
-			$scope.quantity++;
+			$scope.items = RestExampleService.items;
 		};
 
 		$scope.init();
