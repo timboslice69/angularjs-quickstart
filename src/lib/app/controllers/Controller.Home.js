@@ -11,6 +11,6 @@ resourceResolver.register.controller('HomeController', [
 			$scope.items = RestExampleService.items;
 		};
 
-		$scope.init();
+ 		$scope.init();
 	}
 ]);
