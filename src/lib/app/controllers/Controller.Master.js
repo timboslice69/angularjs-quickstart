@@ -4,7 +4,7 @@
 
 resourceResolver.register.controller('MasterController', [
 	// Inject Providers
-	'$rootScope', '$scope', '$route', '$logging', 'APP_CONFIG',
+	'$rootScope', '$scope', '$logging', 'APP_CONFIG',
 	// Inject Services
 	function($scope, $rootScope, $logging, APP_CONFIG) {
 		$scope._name = 'MasterController';

@@ -3,7 +3,7 @@
  */
 
 resourceResolver.register.controller('HomeController', [
-	'$rootScope', '$scope', '$route', '$logging', 'APP_CONFIG', 'RestExampleService',
+	'$rootScope', '$scope', '$logging', 'APP_CONFIG', 'RestExampleService',
 	function($rootScope, $scope, $logging, APP_CONFIG, RestExampleService) {
 		$scope._name = 'HomeController';
 
